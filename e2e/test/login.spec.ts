@@ -1,6 +1,6 @@
-import { LoginPage } from "../pages"
+import { LoginPage } from "../components"
 
-describe('Login', () => {
+describe('Login screen', () => {
   // Create reference for the login page object model
   let loginPage: LoginPage
 

@@ -1,22 +1,8 @@
-import { ButtonElement, IButtonElement, IInputElement, ITextElement, InputElement, LoginSelector, TextElement } from "../components"
+import { ButtonElement, IButtonElement, IInputElement, ITextElement, InputElement, LoginSelector, TextElement } from ".."
 import { element , by } from 'detox'
 
-/**
- * Interface modeling the login page
- */
-export interface ILoginPage {
-  /**
-   * Heading element on the login page
-   */
-  heading: ITextElement
 
-  /**
-   * Bind all elements on the login screen to their class properties
-   */
-  bind(): Promise<ILoginPage>
-}
-
-export class LoginPage implements ILoginPage {
+export class LoginPage {
   private _heading?: Detox.NativeElement
   private _email?: Detox.NativeElement
   private _password?: Detox.NativeElement
@@ -27,7 +13,10 @@ export class LoginPage implements ILoginPage {
   }
  
 
-  async bind(): Promise<ILoginPage> {
+  /**
+   * Bind all elements on the login screen to their class properties
+   */
+  async bind(): Promise<LoginPage> {
     console.log('Binding Login page heading')
     this._heading = element(by.id(LoginSelector.heading))
     this._email = element(by.id(LoginSelector.emailInput))
