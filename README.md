@@ -43,4 +43,4 @@ This app has the following dependencies:
 - typescript
 
 # License
-This app is licensed under the MIT license. See LICENSE for more information.
+This app is licensed under the MIT license.
